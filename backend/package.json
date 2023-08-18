@@ -1,0 +1,11 @@
+{
+  "name": "appsalon_mevn_backend",
+  "version": "1.0.0",
+  "description": "backend appsalon ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maria Leonor Pinto Sabater",
+  "license": "ISC"
+}
