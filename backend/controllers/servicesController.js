@@ -69,10 +69,36 @@ const updateService = async (req, res) => {
     }
 }
 
+const deleteService = async (req, res) => {
+    const { id } = req.params
+
+    // Validar un object id
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        const error = new Error('El ID no es válido')
+        return res.status(400).json({
+            msg: error.message
+        })
+    }
+
+    const service = await Services.findById(id);
+    if (!service) {
+        return handleNotFoundError('El servicio no existe', res)
+    }
+
+    try {
+        await service.deleteOne();
+        res.json({
+            msg: 'El servicio se elimino correctamente'
+        })
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 export {
     createService,
     getServices,
     getServiceById,
-    updateService
+    updateService,
+    deleteService
 }
