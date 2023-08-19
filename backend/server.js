@@ -16,10 +16,8 @@ db();
 // Definir una ruta
 app.use('/api/services', servicesRoutes)
 
-
 // Definir puerto
 const PORT = process.env.PORT || 4000;
-
 
 // Arrancar la App
 app.listen(PORT, () => {
