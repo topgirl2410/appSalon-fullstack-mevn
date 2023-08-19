@@ -11,11 +11,16 @@ dotenv.config()
 // Configurar App
 const app = express();
 
+// Leer datos del body
+app.use(express.json())
+
 // Conectar Db
 db();
 
 // Definir una ruta
-app.use('/api/services', servicesRoutes)
+app.use('/api/services', servicesRoutes);
+
+
 
 // Definir puerto
 const PORT = process.env.PORT || 4000;

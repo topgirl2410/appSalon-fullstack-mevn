@@ -1,4 +1,8 @@
-import { services } from '../data/beautyServices.js'
+import { services } from '../data/beautyServices.js';
+
+const createService = async (req, res) => {
+    console.log(req.body)
+}
 
 const getServices = (req, res) => {
 
@@ -6,5 +10,6 @@ const getServices = (req, res) => {
 }
 
 export {
+    createService,
     getServices
 }
