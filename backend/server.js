@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 import colors from 'colors'
 
 import servicesRoutes from './routes/servicesRoutes.js'
-import { db } from './data/db.js';
+import { db } from './config/db.js';
 
 // variables de entorno
 dotenv.config()
