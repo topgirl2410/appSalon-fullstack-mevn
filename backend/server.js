@@ -1,7 +1,11 @@
 import express from 'express';
+import dotenv from 'dotenv'
 import servicesRoutes from './routes/servicesRoutes.js'
 
 import { db } from './data/db.js';
+
+// variables de entorno
+dotenv.config()
 
 // Configurar App
 const app = express();
@@ -21,3 +25,5 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log('El servidor se esta ejecutando correctamente en el puerto:', PORT)
 })
+
+console.log(process.env)
