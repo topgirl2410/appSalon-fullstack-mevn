@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "app": "url('/img/2.jpg')"
+        "app": "url('/img/slogan.jpg')"
       }
     },
   },
